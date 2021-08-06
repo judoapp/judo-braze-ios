@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,13 @@
 		49A5F90E26BD7F9A000119EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A5F90C26BD7F9A000119EA /* Main.storyboard */; };
 		49A5F91026BD7F9A000119EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A5F90F26BD7F9A000119EA /* Assets.xcassets */; };
 		49A5F91326BD7F9A000119EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A5F91126BD7F9A000119EA /* LaunchScreen.storyboard */; };
+		49CA789D26CC7C6B00457134 /* JudoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 49CA789C26CC7C6B00457134 /* JudoSDK */; };
+		49CA789F26CC7C6B00457134 /* AppboyUI in Frameworks */ = {isa = PBXBuildFile; productRef = 49CA789E26CC7C6B00457134 /* AppboyUI */; };
+		49CA78A226CD862300457134 /* Judo-Braze in Frameworks */ = {isa = PBXBuildFile; productRef = 49CA78A126CD862300457134 /* Judo-Braze */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49097FC826FA362700A3E3D0 /* judo-braze-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "judo-braze-ios"; path = ..; sourceTree = "<group>"; };
 		49A5F90326BD7F9A000119EA /* Judo Braze Demo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Judo Braze Demo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A5F90626BD7F9A000119EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A5F90826BD7F9A000119EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +35,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49CA78A226CD862300457134 /* Judo-Braze in Frameworks */,
+				49CA789F26CC7C6B00457134 /* AppboyUI in Frameworks */,
+				49CA789D26CC7C6B00457134 /* JudoSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +47,10 @@
 		49A5F8FA26BD7F9A000119EA = {
 			isa = PBXGroup;
 			children = (
+				49097FC826FA362700A3E3D0 /* judo-braze-ios */,
 				49A5F90526BD7F9A000119EA /* Judo Braze Demo App */,
 				49A5F90426BD7F9A000119EA /* Products */,
+				49CA789926CC7C6B00457134 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +76,13 @@
 			path = "Judo Braze Demo App";
 			sourceTree = "<group>";
 		};
+		49CA789926CC7C6B00457134 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +99,11 @@
 			dependencies = (
 			);
 			name = "Judo Braze Demo App";
+			packageProductDependencies = (
+				49CA789C26CC7C6B00457134 /* JudoSDK */,
+				49CA789E26CC7C6B00457134 /* AppboyUI */,
+				49CA78A126CD862300457134 /* Judo-Braze */,
+			);
 			productName = "Judo Braze Demo App";
 			productReference = 49A5F90326BD7F9A000119EA /* Judo Braze Demo App.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +131,10 @@
 				Base,
 			);
 			mainGroup = 49A5F8FA26BD7F9A000119EA;
+			packageReferences = (
+				49A5F91A26BD8001000119EA /* XCRemoteSwiftPackageReference "judo-ios" */,
+				49CA789526CC767900457134 /* XCRemoteSwiftPackageReference "braze-ios-sdk" */,
+			);
 			productRefGroup = 49A5F90426BD7F9A000119EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,6 +318,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rover.Judo-Braze-Demo-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -312,6 +338,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.rover.Judo-Braze-Demo-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -341,6 +368,42 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49A5F91A26BD8001000119EA /* XCRemoteSwiftPackageReference "judo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/judoapp/judo-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+		49CA789526CC767900457134 /* XCRemoteSwiftPackageReference "braze-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/braze-inc/braze-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		49CA789C26CC7C6B00457134 /* JudoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49A5F91A26BD8001000119EA /* XCRemoteSwiftPackageReference "judo-ios" */;
+			productName = JudoSDK;
+		};
+		49CA789E26CC7C6B00457134 /* AppboyUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49CA789526CC767900457134 /* XCRemoteSwiftPackageReference "braze-ios-sdk" */;
+			productName = AppboyUI;
+		};
+		49CA78A126CD862300457134 /* Judo-Braze */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "Judo-Braze";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 49A5F8FB26BD7F9A000119EA /* Project object */;
 }

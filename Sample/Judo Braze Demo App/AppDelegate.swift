@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ABKInAppMessageController
     }
 
     @IBAction func buttonClicked(_ sender: Any) {
-        // Fire a Braze Event. If you have an appropriate campaign set up in your Braze settings for this event to open an IAP with the `judo-experience` extra field added, then this should open the Experience.
+        // Fire a Braze Event. If you have an appropriate campaign set up in your Braze settings for this event to open an IAM with the `judo-experience` extra field added, then this should open the Experience.
         Appboy.sharedInstance()?.logCustomEvent("My Test Event")
     }
     
